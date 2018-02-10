@@ -1,0 +1,238 @@
+﻿@model IImportsA.Models.Item
+
+@{
+    ViewBag.Title = "Detalhe";
+}
+
+<h2>Detalhes</h2>
+
+<div class="row">
+    <h4>Item</h4>
+    <hr />
+    <dl class="dl-horizontal col-lg-7">
+        <dt>
+            @Html.DisplayNameFor(model => model.Imagem)
+        </dt>
+
+        <dd>
+            <a href="#"> 
+            <img src="~/fonts/IMG/@Html.DisplayFor(model => model.Imagem)" height="128" width="128" />
+             </a> 
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Referencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Referencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantidadeTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantidadeTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Preco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Preco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+
+    </dl>
+    <!--  cor / modelo -->
+    <div class="row">
+        <div class="col-lg-2">
+            <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Cor por Estoque</button>
+
+                <div class="dropdown-menu">
+                    @if (@Html.DisplayFor(model => model.Quantidade_Cor_1).ToString() == "0" && @Html.DisplayFor(model => model.Cor_1).ToString() == "out") { }
+                    else
+                    {<span class="dropdown-item" href="#" style="background-color:@Html.DisplayFor(model => model.Cor_1)">_________Cor 1:</span> @Html.DisplayFor(model => model.Quantidade_Cor_1) <br />}
+
+                    @if (@Html.DisplayFor(model => model.Quantidade_Cor_2).ToString() == "0" && @Html.DisplayFor(model => model.Cor_2).ToString() == "out") { }
+                    else
+                    {<span class="dropdown-item" href="#" style="background-color:@Html.DisplayFor(model => model.Cor_2)">_________Cor 2:</span> @Html.DisplayFor(model => model.Quantidade_Cor_2) <br />}
+
+                    @if (@Html.DisplayFor(model => model.Quantidade_Cor_3).ToString() == "0" && @Html.DisplayFor(model => model.Cor_3).ToString() == "out") { }
+                    else
+                    {<span class="dropdown-item" href="#" style="background-color:@Html.DisplayFor(model => model.Cor_3)">_________Cor 3:</span> @Html.DisplayFor(model => model.Quantidade_Cor_3) <br />}
+
+                    @if (@Html.DisplayFor(model => model.Quantidade_Cor_4).ToString() == "0" && @Html.DisplayFor(model => model.Cor_4).ToString() == "out") { }
+                    else
+                    {<span class="dropdown-item" href="#" style="background-color:@Html.DisplayFor(model => model.Cor_4)">_________Cor 4:</span> @Html.DisplayFor(model => model.Quantidade_Cor_4) <br />}
+
+                    @if (@Html.DisplayFor(model => model.Quantidade_Cor_5).ToString() == "0" && @Html.DisplayFor(model => model.Cor_5).ToString() == "out") { }
+                    else
+                    {<span class="dropdown-item" href="#" style="background-color:@Html.DisplayFor(model => model.Cor_5)">_________Cor 5:</span> @Html.DisplayFor(model => model.Quantidade_Cor_5) <br />}
+
+                    @if (@Html.DisplayFor(model => model.Quantidade_Cor_6).ToString() == "0" && @Html.DisplayFor(model => model.Cor_6).ToString() == "out") { }
+                    else
+                    {<span class="dropdown-item" href="#" style="background-color:@Html.DisplayFor(model => model.Cor_6)">_________Cor 6:</span> @Html.DisplayFor(model => model.Quantidade_Cor_6) <br />}
+
+                    @if (@Html.DisplayFor(model => model.Quantidade_Cor_7).ToString() == "0" && @Html.DisplayFor(model => model.Cor_7).ToString() == "out") { }
+                    else
+                    {<span class="dropdown-item" href="#" style="background-color:@Html.DisplayFor(model => model.Cor_7)">_________Cor 7:</span> @Html.DisplayFor(model => model.Quantidade_Cor_7) <br />}
+
+                    @if (@Html.DisplayFor(model => model.Quantidade_Cor_8).ToString() == "0" && @Html.DisplayFor(model => model.Cor_8).ToString() == "out") { }
+                    else
+                    {<span class="dropdown-item" href="#" style="background-color:@Html.DisplayFor(model => model.Cor_8)">_________Cor 8:</span> @Html.DisplayFor(model => model.Quantidade_Cor_8) <br />}
+
+                    @if (@Html.DisplayFor(model => model.Quantidade_Cor_9).ToString() == "0" && @Html.DisplayFor(model => model.Cor_9).ToString() == "out") { }
+                    else
+                    {<span class="dropdown-item" href="#" style="background-color:@Html.DisplayFor(model => model.Cor_9)">_________Cor 9:</span> @Html.DisplayFor(model => model.Quantidade_Cor_9) <br />}
+
+                    @if (@Html.DisplayFor(model => model.Quantidade_Cor_10).ToString() == "0" && @Html.DisplayFor(model => model.Cor_10).ToString() == "out") { }
+                    else
+                    {<span class="dropdown-item" href="#" style="background-color:@Html.DisplayFor(model => model.Cor_10)">_________Cor 10:</span> @Html.DisplayFor(model => model.Quantidade_Cor_10) <br />}
+
+                    @if (@Html.DisplayFor(model => model.Quantidade_Cor_11).ToString() == "0" && @Html.DisplayFor(model => model.Cor_11).ToString() == "out") { }
+                    else
+                    {<span class="dropdown-item" href="#" style="background-color:@Html.DisplayFor(model => model.Cor_11)">_________Cor 11:</span> @Html.DisplayFor(model => model.Quantidade_Cor_11) <br />}
+
+                    @if (@Html.DisplayFor(model => model.Quantidade_Cor_12).ToString() == "0" && @Html.DisplayFor(model => model.Cor_12).ToString() == "out") { }
+                    else
+                    {<span class="dropdown-item" href="#" style="background-color:@Html.DisplayFor(model => model.Cor_12)">_________Cor 12:</span> @Html.DisplayFor(model => model.Quantidade_Cor_12) <br />}
+
+                    @if (@Html.DisplayFor(model => model.Quantidade_Cor_13).ToString() == "0" && @Html.DisplayFor(model => model.Cor_13).ToString() == "out") { }
+                    else
+                    {<span class="dropdown-item" href="#" style="background-color:@Html.DisplayFor(model => model.Cor_13)">_________Cor 13:</span> @Html.DisplayFor(model => model.Quantidade_Cor_13) <br />}
+
+                    @if (@Html.DisplayFor(model => model.Quantidade_Cor_14).ToString() == "0" && @Html.DisplayFor(model => model.Cor_14).ToString() == "out") { }
+                    else
+                    {<span class="dropdown-item" href="#" style="background-color:@Html.DisplayFor(model => model.Cor_14)">_________Cor 14:</span> @Html.DisplayFor(model => model.Quantidade_Cor_14) <br />}
+
+                    @if (@Html.DisplayFor(model => model.Quantidade_Cor_15).ToString() == "0" && @Html.DisplayFor(model => model.Cor_15).ToString() == "out") { }
+                    else
+                    {<span class="dropdown-item" href="#" style="background-color:@Html.DisplayFor(model => model.Cor_15)">_________Cor 15:</span> @Html.DisplayFor(model => model.Quantidade_Cor_15) <br />}
+
+                    @if (@Html.DisplayFor(model => model.Quantidade_Cor_16).ToString() == "0" && @Html.DisplayFor(model => model.Cor_16).ToString() == "out") { }
+                    else
+                    {<span class="dropdown-item" href="#" style="background-color:@Html.DisplayFor(model => model.Cor_16)">_________Cor 16:</span> @Html.DisplayFor(model => model.Quantidade_Cor_16) <br />}
+
+                    @if (@Html.DisplayFor(model => model.Quantidade_Cor_17).ToString() == "0" && @Html.DisplayFor(model => model.Cor_17).ToString() == "out") { }
+                    else
+                    {<span class="dropdown-item" href="#" style="background-color:@Html.DisplayFor(model => model.Cor_17)">_________Cor 17:</span> @Html.DisplayFor(model => model.Quantidade_Cor_17) <br />}
+
+                    @if (@Html.DisplayFor(model => model.Quantidade_Cor_18).ToString() == "0" && @Html.DisplayFor(model => model.Cor_18).ToString() == "out") { }
+                    else
+                    {<span class="dropdown-item" href="#" style="background-color:@Html.DisplayFor(model => model.Cor_18)">_________Cor 18:</span> @Html.DisplayFor(model => model.Quantidade_Cor_18) <br />}
+
+                    @if (@Html.DisplayFor(model => model.Quantidade_Cor_19).ToString() == "0" && @Html.DisplayFor(model => model.Cor_19).ToString() == "out") { }
+                    else
+                    {<span class="dropdown-item" href="#" style="background-color:@Html.DisplayFor(model => model.Cor_19)">_________Cor 19:</span> @Html.DisplayFor(model => model.Quantidade_Cor_19) <br />}
+
+                    @if (@Html.DisplayFor(model => model.Quantidade_Cor_20).ToString() == "0" && @Html.DisplayFor(model => model.Cor_20).ToString() == "out") { }
+                    else
+                    {<span class="dropdown-item" href="#" style="background-color:@Html.DisplayFor(model => model.Cor_20)">_________Cor 20:</span> @Html.DisplayFor(model => model.Quantidade_Cor_20) <br />}
+                </div>
+            </div>
+        </div>
+
+        <!--FECHAR QUANTIDADE E CORES-->
+        <div class="col-lg-2">
+
+            <div class="dropdown">
+
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Tamanho</button>
+
+                <div class="dropdown-menu">
+
+
+                    <span class="dropdown-item" href="#">Tamanho 1</span>:
+
+                    <span class="dropdown-item" href="#">@Html.DisplayFor(model => model.Tamanho_1)</span><br />
+
+                    <span class="dropdown-item" href="#">Tamanho 2</span>:
+
+                    <span class="dropdown-item" href="#">@Html.DisplayFor(model => model.Tamanho_2)</span><br />
+
+                    <span class="dropdown-item" href="#">Tamanho 3</span>:
+
+                    <span class="dropdown-item" href="#">@Html.DisplayFor(model => model.Tamanho_3)</span><br />
+
+                    <span class="dropdown-item" href="#">Tamanho 4</span>:
+
+                    <span class="dropdown-item" href="#">@Html.DisplayFor(model => model.Tamanho_4)</span><br />
+
+                    <span class="dropdown-item" href="#">Tamanho 5 </span>:
+
+                    <span class="dropdown-item" href="#">@Html.DisplayFor(model => model.Tamanho_5)</span><br />
+
+                    <span class="dropdown-item" href="#">Tamanho 6 </span>:
+
+                    <span class="dropdown-item" href="#">@Html.DisplayFor(model => model.Tamanho_6)</span><br />
+
+                    <span class="dropdown-item" href="#">Tamanho 7 </span>:
+
+                    <span class="dropdown-item" href="#">@Html.DisplayFor(model => model.Tamanho_7)</span><br />
+
+                    <span class="dropdown-item" href="#">Tamanho 8 </span>:
+
+                    <span class="dropdown-item" href="#">@Html.DisplayFor(model => model.Tamanho_8)</span><br />
+
+                    <span class="dropdown-item" href="#">Tamanho 9 </span>:
+
+                    <span class="dropdown-item" href="#">@Html.DisplayFor(model => model.Tamanho_9)</span><br />
+
+                    <span class="dropdown-item" href="#">Tamanho 10</span>:
+
+                    <span class="dropdown-item" href="#">@Html.DisplayFor(model => model.Tamanho_10)</span><br />
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Volte ao catalogo", "Produto")
+</p>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="" id="model-img-id" height="100%" width="100%" />
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('img').on('click', function () {
+                var src = $(this).attr('src');
+                $("#model-img-id").attr('src', src);
+                $("#myModal").modal('show');
+            });
+        })
+    </script>
+}

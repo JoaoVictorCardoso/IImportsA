@@ -1,0 +1,357 @@
+﻿@model IEnumerable<IImportsA.Models.Item>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Referencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuantidadeTotal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Preco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Imagem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cor_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade_Cor_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cor_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade_Cor_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cor_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade_Cor_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cor_4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade_Cor_4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cor_5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade_Cor_5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cor_6)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade_Cor_6)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cor_7)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade_Cor_7)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cor_8)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade_Cor_8)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cor_9)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade_Cor_9)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cor_10)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade_Cor_10)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cor_11)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade_Cor_11)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cor_12)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade_Cor_12)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cor_13)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade_Cor_13)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cor_14)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade_Cor_14)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cor_15)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade_Cor_15)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cor_16)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade_Cor_16)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cor_17)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade_Cor_17)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cor_18)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade_Cor_18)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cor_19)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade_Cor_19)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cor_20)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade_Cor_20)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tamanho_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tamanho_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tamanho_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tamanho_4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tamanho_5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tamanho_6)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tamanho_7)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tamanho_8)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tamanho_9)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tamanho_10)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Referencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuantidadeTotal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Preco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Imagem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cor_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade_Cor_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cor_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade_Cor_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cor_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade_Cor_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cor_4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade_Cor_4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cor_5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade_Cor_5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cor_6)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade_Cor_6)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cor_7)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade_Cor_7)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cor_8)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade_Cor_8)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cor_9)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade_Cor_9)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cor_10)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade_Cor_10)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cor_11)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade_Cor_11)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cor_12)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade_Cor_12)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cor_13)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade_Cor_13)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cor_14)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade_Cor_14)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cor_15)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade_Cor_15)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cor_16)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade_Cor_16)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cor_17)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade_Cor_17)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cor_18)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade_Cor_18)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cor_19)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade_Cor_19)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cor_20)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade_Cor_20)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tamanho_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tamanho_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tamanho_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tamanho_4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tamanho_5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tamanho_6)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tamanho_7)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tamanho_8)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tamanho_9)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tamanho_10)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

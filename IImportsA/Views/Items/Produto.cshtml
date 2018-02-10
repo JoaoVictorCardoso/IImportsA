@@ -1,0 +1,84 @@
+﻿@model IEnumerable<IImportsA.Models.Item>
+
+@{
+    ViewBag.Title = "Produto";
+}
+<div class="row">
+    <div class="nav navbar-nav">
+        <h2> @Html.ActionLink("Todos", "Produto")</h2>
+    </div>
+    <div class="nav navbar-nav navbar-right" style="margin:20px">
+        <form asp-controller="Item" asp-action="Produto">
+            <div class="row col-3">
+                <div class="col-1">
+                    <input type="text" name="busca" class="form-control" placeholder="Busque">
+                </div>
+                <div class="col-1">
+
+                    <input class="btn-block form-control" type="submit" value="Filtre">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-4 col-md-3" style="margin: 20px">
+
+            <div class="thumbnail">
+                @if (Html.ValueFor(modelItem => item.Imagem).ToString() != "")
+                {
+                    <a href="#"  >
+                        <img src="~/fonts/IMG/@Html.ValueFor(modelItem => item.Imagem)" height="256" width="180">
+                    </a>
+                }
+                else
+                {
+                    <img src="~/fonts/Config/semfoto.png" height="256" width="180">
+                }
+                <a href="~/Items/UDetalhe/@Html.DisplayFor(id => item.Id)">
+                    <div class="caption">
+                        <p>Referência @Html.DisplayFor(modelItem => item.Referencia) </p>
+                        <p>Valor Semi Jóia: @Html.DisplayFor(modelItem => item.Preco)</p>
+                        <p>Valor Jóia:  10 </p>
+                        <p>Quantidade: @Html.DisplayFor(modelItem => item.QuantidadeTotal)</p>
+                        <p>@Html.ActionLink("Detalhes", "UDetalhe", new { id = item.Id })</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    }
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="" id="model-img-id" height="100%" width="100%"/>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('img').on('click', function () {
+                var src = $(this).attr('src');
+                $("#model-img-id").attr('src', src);
+                $("#myModal").modal('show');
+            });
+        })
+    </script>
+}
